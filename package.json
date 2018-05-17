@@ -16,7 +16,9 @@
   ],
   "scripts": {
     "build": "npm run clean && babel src/Portal.js > dist/Portal.js && babel src/RelativePortal.js > dist/RelativePortal.js",
+    "build:win": "npm run clean:win && babel src/Portal.js > dist/Portal.js && babel src/RelativePortal.js > dist/RelativePortal.js",
     "clean": "rm -Rf dist && mkdir dist",
+    "clean:win": "rd /S /Q dist && md dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
